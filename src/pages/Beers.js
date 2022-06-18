@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../services/api";
+import { Header } from "./Header";
 
 // import { Container } from './styles';
 
@@ -13,15 +14,25 @@ export function Beers() {
   }, []);
 
   return (
-    <ul>
-      {beers.map((data) => {
-        return (
-          <li key={data.name}>
-            <p>{data.name}</p>
-            <button>oi</button>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <Header />
+      <h2>Populares</h2>
+      <div className="flex flex-column flex-wrap justify-center w-full h-auto">
+        <div>
+          <div className="flex max-w-md flex-wrap justify-between">
+            {beers.map((data) => {
+              return (
+                <div key={data.name} className=" bg-slate-500">
+                  <img
+                    src={data.image_url}
+                    className="w-auto max-h-72 border-none"
+                  ></img>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
