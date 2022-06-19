@@ -8,12 +8,17 @@ import { Header } from "./Header";
 
 export function Beers() {
   const [beers, setBeers] = useState([]);
+  const [popupContent, setpopupContent] = useState([]);
 
   useEffect(() => {
     api.get().then((response) => {
       setBeers(response.data);
     });
   }, []);
+
+  const changecontent = (data) => {
+    setpopupContent([data]);
+  };
 
   return (
     <>
@@ -30,12 +35,23 @@ export function Beers() {
                 <div
                   key={data.name}
                   className="shadow-2xl hover:shadow-green-500 cursor-pointer text-center block"
+                  onClick={() => changecontent(data)}
                 >
                   <img
                     src={data.image_url}
                     className="w-auto max-h-72 border-none"
                   ></img>
                   {data.name}
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            {popupContent.map((data) => {
+              return (
+                <div>
+                  <p>name: {data.name}</p>
+                  <p>description: {data.description}</p>
                 </div>
               );
             })}
