@@ -10,9 +10,8 @@ export function Header() {
         <h1 className="color-black font-bold text-3xl">
           <span className="font-thin">beer</span>Better
         </h1>
-        <button className="text-base">about</button>
+        <button className="text-base">sobre</button>
       </header>
-      <Banner />
     </>
   );
 }
