@@ -1,10 +1,11 @@
 import React from "react";
+import trigopic from "../assets/trigopic.png";
 
 export function Banner() {
   return (
-    <div className="w-full max-w-7xl pl-10 pr-10 pb-10">
-      <section className="bg-amber-200 h-52 flex flex-row items-center rounded-3xl">
-        <div className="pl-10">
+    <div className="">
+      <section className="bg-amber-200 h-52 grid grid-cols-2 flex-wrap items-center rounded-3xl mb-3">
+        <div className="pl-10 block">
           <h2 className="text-xl font-bold text-start pb-4">
             Encontre a <span className="block">cerveja perfeita</span>
           </h2>
@@ -12,10 +13,10 @@ export function Banner() {
             className=" block max-w-md text-xl
            font-normal leading-6"
           >
-            Descubra qual cerveja é ideal para você ou para aquele churrasco com
-            a galera.
+            Descubra a cerveja é ideal para você.
           </p>
         </div>
+        <img src={trigopic} className="w-2/5" />
       </section>
     </div>
   );

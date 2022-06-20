@@ -4,7 +4,7 @@ import React from "react";
 
 export function Footer() {
   return (
-    <footer className="w-full max-w-7xl pl-10 pr-10">
+    <footer className="mt-4">
       <article className="flex pl-10 pr-10 pt-8 pb-8 rounded-3xl w-auto max-w-7xl flex-col justify-around items-center bg-amber-200">
         <p>
           <a
