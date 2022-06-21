@@ -1,5 +1,5 @@
 # :beer: Beer-app
- Web react application for https://punkapi.com
+ React application with https://punkapi.com
 <img src="https://media.discordapp.net/attachments/464209886528405524/988781433994743818/Post_para_o_dia_da_internet_do_instagram_impressionando_celeste_2.jpg?width=365&height=365"></img>
 ### Sobre o projeto
 
