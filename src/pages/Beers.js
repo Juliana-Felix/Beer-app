@@ -39,21 +39,21 @@ export function Beers() {
         <Header />
         <Banner />
         <h2 className="font-semibold text-2xl text-center leading-6 mb-5">
-          Cervejas Populares
+          Cervejas Artesanais
         </h2>
-        <div className="flex flex-column flex-wrap justify-center w-full h-auto">
-          <div>
+        <div className="md:h-full flex items-center text-gray-600">
+          <div className="container px-5 py-16 mx-auto">
             <div className="grid grid-cols-3 gap-12 w-full flex-wrap justify-center mb-3">
               {currentDatas.map((data) => {
                 return (
                   <div
                     key={data.id}
-                    className="shadow-2xl hover:shadow-green-500 cursor-pointer text-center block"
+                    className="shadow-2xl hover:shadow-green-400 cursor-pointer text-center block w-auto"
                     onClick={() => changecontent(data)}
                   >
                     <img
                       src={data.image_url}
-                      className="w-auto max-h-72 border-none"
+                      className="w-auto  max-h-72 border-none"
                     ></img>
                     {data.name}
                   </div>
@@ -93,17 +93,29 @@ export function Beers() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="w-3/4 h-3/4 bg-white m-auto "
+              className="w-3/4 h-auto bg-white m-auto rounded-2xl box-border"
             >
               <div className="w-full text-right pr-2">
-                <button onClick={changecontent}>x</button>
+                <button
+                  onClick={changecontent}
+                  className="rounded-full hover:bg-gray-200 delay-50 duration-100 p-1"
+                >
+                  x
+                </button>
               </div>
               <div className="text-center justify-center p-10 flex-auto block border-solid box-border">
                 {popupContent.map((data) => {
                   return (
                     <div>
-                      <p>name: {data.name}</p>
-                      <p>description: {data.description}</p>
+                      <p className="hover:font-semibold pb-1">
+                        Name: {data.name}
+                      </p>
+                      <p className="hover:font-semibold">
+                        Description: {data.description}
+                      </p>
+                      <p className="hover:font-semibold">
+                        Tagline: {data.tagline}
+                      </p>
                     </div>
                   );
                 })}

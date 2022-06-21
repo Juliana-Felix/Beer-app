@@ -21,11 +21,11 @@ export function Header() {
 
   return (
     <>
-      <header className="flex justify-between items-center w-full pb-10 pt-10 pl-10 pr-10 ">
-        <h1 className="color-black font-bold text-3xl">
+      <header className="flex justify-between items-center w-full pb-10 pt-10 pl-10 pr-10">
+        <h1 className="color-black font-bold text-3xl pr-5">
           <span className="font-thin">beer</span>Better
         </h1>
-        <div>
+        <div className="w-auto">
           <button onClick={handleClickHome} className="text-base mr-5">
             Principal
           </button>
