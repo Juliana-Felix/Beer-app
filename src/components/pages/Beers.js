@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { api } from "../services/api";
-import { Banner } from "./Banner";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-
-// import { Container } from './styles';
+import { api } from "../../services/api";
+import { Banner } from "../Banner";
+import { Footer } from "../Footer";
+import { Header } from "../Header";
 
 export function Beers() {
   const [beers, setBeers] = useState([]);

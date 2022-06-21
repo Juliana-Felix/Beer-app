@@ -1,20 +1,18 @@
 import React from "react";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-import Oktoberfest from "../assets/oktoberfest.png";
-import reactpic from "../assets/reactpic.png";
-import jspic from "../assets/jspic.png";
-import gitpic from "../assets/gitpic.png";
-
-// import { Container } from './styles';
+import { Footer } from "../Footer";
+import { Header } from "../Header";
+import Oktoberfest from "../../assets/oktoberfest.png";
+import reactpic from "../../assets/reactpic.png";
+import jspic from "../../assets/jspic.png";
+import gitpic from "../../assets/gitpic.png";
 
 export function About() {
   return (
     <>
       <div className="w-auto max-w-7xl h-auto block mt-0 ml-20 mr-16 mb-20 relative box-border">
         <Header />
-        <article className=" ">
-          <div className="">
+        <article>
+          <div>
             <section className="bg-green-200 h-52 grid grid-cols-2 items-center rounded-3xl mb-3">
               <h2 className="text-center block m-0 font-semibold text-2xl">
                 Sobre Beer Better
@@ -36,12 +34,17 @@ export function About() {
                   Juliana Félix
                 </a>
                 como um trabalho para apresentar suas habilidades em{" "}
-                <a href="https://reactjs.org/" className=" underline pr-1">
+                <a
+                  href="https://reactjs.org/"
+                  target="_blank"
+                  className=" underline pr-1"
+                >
                   React.
                 </a>
                 A fonte do código para seu projeto pode ser encontrado no{" "}
                 <a
                   href="https://github.com/Juliana-Felix/Beer-app"
+                  target="_blank"
                   className="underline"
                 >
                   Repositório do github

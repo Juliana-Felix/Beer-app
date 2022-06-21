@@ -1,7 +1,5 @@
 import React from "react";
 
-// import { Container } from './styles';
-
 export function Footer() {
   return (
     <footer className="mt-4">
@@ -9,7 +7,7 @@ export function Footer() {
         <p>
           <a
             className="underline"
-            href="https:www.linkedin.com/in/julianafelixdesouza"
+            href="https://www.linkedin.com/in/julianafelixdesouza/"
             target="_blank"
           >
             Juliana Félix
@@ -18,7 +16,7 @@ export function Footer() {
         </p>
         <p>
           Feito com <span>❤</span> e{" "}
-          <a href="https://reactjs.org/" className="underline">
+          <a href="https://reactjs.org/" target="_blank" className="underline">
             React
           </a>
           .{" "}
