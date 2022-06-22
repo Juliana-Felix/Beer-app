@@ -1,13 +1,10 @@
 const express = require("express");
+const path = require("path");
+const port = process.env.PORT || 8080;
 const app = express();
-const { resolve } = require("path");
-
-app.use(express.static(resolve(__dirname, "./public")));
-
-app.listen(process.env.PORT || 8080, (err) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  console.log("Tudo funcionando direto");
+app.use(express.static(__dirname + "/public"));
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
+app.listen(port);
+console.log("Server started on port " + port);
