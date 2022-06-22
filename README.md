@@ -1,5 +1,5 @@
 # :beer: Beer-app
- [click aqui para entrar no site](https://silly-dango-e51ed9.netlify.app/)
+ [click para conhecer a beerBetter app](https://silly-dango-e51ed9.netlify.app/)
 <img src="https://media.discordapp.net/attachments/464209886528405524/988781433994743818/Post_para_o_dia_da_internet_do_instagram_impressionando_celeste_2.jpg?width=365&height=365"></img>
 ### Sobre o projeto
 
