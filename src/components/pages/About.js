@@ -27,7 +27,7 @@ export function About() {
               <p>
                 Este site não tem proposito comercial. Foi feito por{" "}
                 <a
-                  href="https:www.github.com/juliana-felix"
+                  href="https://www.github.com/juliana-felix"
                   target="_blank"
                   className="underline pr-1"
                 >
