@@ -2,14 +2,10 @@ const express = require("express");
 
 const app = express();
 
-const baseDir = `${__dirname}/dist/`;
+app.use(express.static("./dist/bundle"));
 
-app.use(express.static(`${baseDir}`));
+app.get("/*", function (req, res) {
+  res.sendFile("index.html", { root: "dist/bundle/" });
+});
 
-app.get("*", (req, res) => res.sendFile("index.html", { root: baseDir }));
-
-const port = 8080;
-
-app.listen(port, () =>
-  console.log(`Servidor subiu com sucesso em http://localhost:${port}`)
-);
+app.listen(process.env.PORT || 8080);
